@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 
+
 namespace Диплом
 {
     public partial class Form1 : Form
@@ -17,6 +18,8 @@ namespace Диплом
         public Form1()
         {
             InitializeComponent();
+            openFileDialog1.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
+            saveFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
         }
 
 
@@ -66,41 +69,65 @@ namespace Диплом
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string defaultValue = "Введите название файла";
-            string value = Interaction.InputBox("Назовите файл", "Сохранение файла", defaultValue);
-            if (value != "")
+            //string defaultValue = "Введите название файла";
+            //string value = Interaction.InputBox("Назовите файл", "Сохранение файла", defaultValue);
+            //if (value != "")
+            //{
+            //    if (value == "Введите название файла")
+            //    {
+            //        num += 1;
+            //        value = "NewFile" + num;
+            //    }
+            //    string filename = "../" + value + ".txt";
+            //string path = @filename;
+            //if (!File.Exists(path))
+            //{
+            //    // Create a file to write to.
+            //    using (StreamWriter sw = File.CreateText(path))
+            //    {
+            //        for (int i = 0; i < p.Count; i++)
+            //        {
+            //            sw.WriteLine(p[i]);
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    StreamWriter sw = new StreamWriter(path);
+            //    for (int i = 0; i < p.Count; i++)
+            //    {
+            //        sw.WriteLine(p[i]);
+            //    }
+            //    sw.Close();
+            //}
+            //    MessageBox.Show("файл сохранен");
+            //} 
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            string filename = saveFileDialog1.FileName;
+            // сохраняем текст в файл
+            for (int i = 0; i < p.Count; i++)
             {
-                if (value == "Введите название файла")
-                {
-                    num += 1;
-                    value = "NewFile" + num;
-                }
-                string filename = "../" + value + ".txt";
-                string path = @filename;
-                if (!File.Exists(path))
-                {
-                    // Create a file to write to.
-                    using (StreamWriter sw = File.CreateText(path))
-                    {
-                        for (int i = 0; i < p.Count; i++)
-                        {
-                            sw.WriteLine(p[i]);
-                        }
-                    }
-                }
-                else
-                {
-                    StreamWriter sw = new StreamWriter(path);
-                    for (int i = 0; i < p.Count; i++)
-                    {
-                        sw.WriteLine(p[i]);
-                    }
-                    sw.Close();
-                }
-                MessageBox.Show("файл сохранен");
-            } 
+                System.IO.File.WriteAllText(filename, p[i].ToString());
+            }
                 
+            MessageBox.Show("Файл сохранен");
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            // получаем выбранный файл
+            Bitmap image1 = new Bitmap(openFileDialog1.FileName);
+            Size size = pictureBox1.Size;
+            image1 = (new Bitmap(image1, new Size(size.Width, size.Height)));
+              
+            pictureBox1.Image = image1;
             
+            MessageBox.Show("Файл открыт");
+            return;
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)

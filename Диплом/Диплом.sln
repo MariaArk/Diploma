@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Диплом", "Диплом\Диплом.csproj", "{36244A76-E302-481B-8F15-4862F42C4805}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{24442131-1F31-49D5-9FB3-25D39BF1E8FA}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\images_pictures_photos_icon_259596.ico = ..\..\..\..\Downloads\images_pictures_photos_icon_259596.ico
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

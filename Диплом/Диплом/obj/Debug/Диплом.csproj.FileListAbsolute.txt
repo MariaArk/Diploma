@@ -8,3 +8,13 @@ C:\Users\1618060\source\repos\Диплом\Диплом\bin\Debug\Диплом.p
 C:\Users\1618060\source\repos\Диплом\Диплом\obj\Debug\Диплом.exe
 C:\Users\1618060\source\repos\Диплом\Диплом\obj\Debug\Диплом.pdb
 C:\Users\1618060\source\repos\Диплом\Диплом\obj\Debug\Диплом.csproj.AssemblyReference.cache
+C:\Users\1618060\Source\Repos\Diploma\Диплом\Диплом\bin\Debug\Диплом.exe.config
+C:\Users\1618060\Source\Repos\Diploma\Диплом\Диплом\bin\Debug\Диплом.exe
+C:\Users\1618060\Source\Repos\Diploma\Диплом\Диплом\bin\Debug\Диплом.pdb
+C:\Users\1618060\Source\Repos\Diploma\Диплом\Диплом\obj\Debug\Диплом.csproj.AssemblyReference.cache
+C:\Users\1618060\Source\Repos\Diploma\Диплом\Диплом\obj\Debug\Диплом.Form1.resources
+C:\Users\1618060\Source\Repos\Diploma\Диплом\Диплом\obj\Debug\Диплом.Properties.Resources.resources
+C:\Users\1618060\Source\Repos\Diploma\Диплом\Диплом\obj\Debug\Диплом.csproj.GenerateResource.cache
+C:\Users\1618060\Source\Repos\Diploma\Диплом\Диплом\obj\Debug\Диплом.csproj.CoreCompileInputs.cache
+C:\Users\1618060\Source\Repos\Diploma\Диплом\Диплом\obj\Debug\Диплом.exe
+C:\Users\1618060\Source\Repos\Diploma\Диплом\Диплом\obj\Debug\Диплом.pdb
